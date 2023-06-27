@@ -1,154 +1,382 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-        <link href="https://fonts.googleapis.com/css?family=Oleo+Script" rel="stylesheet">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" href="style.css">
-        <title>Instagram Photo Feed</title>
-    </head>
-    <body>
-        <div class="container-fluid d-flex">
-            <div class="row">
-                <div class="col-12">
-                    <nav class="navbar fixed-top navbar-light bg-light">
-                        <div class="container-fluid d-flex">
-                            <div class="col">
-                                <span class="navbar-brand mb-0 ml-5 h1"><i class="fab fa-instagram"></i> Instagram</span>
-                            </div>
-                            <form class="form-inline">
-                                <div>
-                                    <button data-toggle="modal" data-target="#exampleModal" class="btn btn-success" 
-                                    type="button">Create a new post</button>
-                                </div>
 
-                                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
-                                    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                                    <div class="modal-dialog modal-dialog-centered" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title" id="exampleModalLabel">Create a new post</h5>
-                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                    aria-label="Close"></button>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-12">
+            <!-- Barra de navegacion -->
+            <nav class="navgar bg-light">
+                <div class="container-fluid d-flex">
+
+
+                    <div class="col">
+                        <div class="btn">
+                            
+                            <span class="navbar-brand mb-0 ml-5 h1"><i class="fab fa-instagram"></i> Instagram</span>
+                        </div>
+                    </div>
+                    <!-- boton trigger Modal -->
+                    <div class="btn1 me-5">
+                        <button type="button" class="btn btn-success" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">
+                            Create a new post
+                        </button>
+
+                        <!-- Modal -->
+
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Create a new post</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Capture:</p>
+                                        <div class="form-floating">
+                                            <textarea class="form-control" placeholder="Leave a comment here"
+                                                id="floatingTextarea" style="height: 70px"></textarea>
+                                            <label for="floatingTextarea">Add the caption of your post here</label>
+                                        </div>
+                                        <div class="body2 d-flex">
+                                            <div class="btn">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    fill="currentColor" class="bi bi-camera-fill" viewBox="0 0 16 16">
+                                                    <path d="M10.5 8.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
+                                                    <path
+                                                        d="M2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4H2zm.5 2a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1zm9 2.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0z" />
+                                                </svg>
                                             </div>
-                                            <div class="modal-body">
-                                                <p>Capture:</p>
-                                                <div class="form-floating">
-                                                    <textarea class="form-control" placeholder="Leave a comment here"
-                                                        id="floatingTextarea" style="height: 70px"></textarea>
-                                                    <label for="floatingTextarea">Add the caption of your post here</label>
-                                                </div>
-                                                <div class="body2 d-flex">
-                                                    <div class="btn">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                            fill="currentColor" class="bi bi-camera-fill" viewBox="0 0 16 16">
-                                                            <path d="M10.5 8.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
-                                                            <path
-                                                                d="M2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4H2zm.5 2a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1zm9 2.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0z" />
-                                                        </svg>
-                                                    </div>
-                                                    <div class="btn">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                            fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
-                                                            <path
-                                                                d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
-                                                        </svg>
-                                                    </div>
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-secondary"
-                                                        data-dismiss="modal">Close</button>
-                                                    <button type="button" class="btn btn-success" data-dismiss="modal">Publish</button>
-                                                </div>
+                                            <div class="btn">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                                                </svg>
                                             </div>
+                                        </div>
+                                        <div class="bot btns float-end">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-bs-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-success">Publish</button>
                                         </div>
                                     </div>
                                 </div>
-                                    
-
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown" 
-                                    aria-haspopup="true" aria-expanded="false">
-                                        <i class="fas fa-cog"></i>
-                                    </button>
-                                    <div class="dropdown-menu dropdown-menu-right">
-                                        <a class="dropdown-item" href="#">Profile</a>
-                                        <a class="dropdown-item" href="#">Settings</a>
-                                        <a class="dropdown-item" href="#">Privacy</a>
-                                        <div class="dropdown-divider"></div>
-                                        <a class="dropdown-item" href="#">Close Sesion</a>
-                                    </div>
-                                </div>
-                            </form>
+                            </div>
                         </div>
-                    </nav>
+                    </div>
+                    <!-- Example split secondary button -->
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-secondary"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="16" height="16" fill="currentColor" class="bi bi-gear-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z" />
+                            </svg></button>
+                        <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split me-5"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <span class="visually-hidden">Toggle Dropdown</span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Settings</a></li>
+                            <li><a class="dropdown-item" href="#">Security</a></li>
+                            <li><a class="dropdown-item" href="#">Notifications</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item " href="#">
+                                    <p class="text-danger">Log out</p>
+                                </a></li>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <nav>
+        <div class="nav nav-tabs justify-content-center" id="nav-tab" role="tablist">
+            <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home"
+                type="button" role="tab" aria-controls="nav-home" aria-selected="true"><svg
+                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-grid-3x3"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M0 1.5A1.5 1.5 0 0 1 1.5 0h13A1.5 1.5 0 0 1 16 1.5v13a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 14.5v-13zM1.5 1a.5.5 0 0 0-.5.5V5h4V1H1.5zM5 6H1v4h4V6zm1 4h4V6H6v4zm-1 1H1v3.5a.5.5 0 0 0 .5.5H5v-4zm1 0v4h4v-4H6zm5 0v4h3.5a.5.5 0 0 0 .5-.5V11h-4zm0-1h4V6h-4v4zm0-5h4V1.5a.5.5 0 0 0-.5-.5H11v4zm-1 0V1H6v4h4z" />
+                </svg></button>
+
+            <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile"
+                type="button" role="tab" aria-controls="nav-profile" aria-selected="false"><svg
+                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-square-fill" viewBox="0 0 16 16">
+                    <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2z" />
+                </svg></button>
+        </div>
+    </nav>
+    <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+            <div>
+                <div class="row g-1">
+                    <div class="col-4">
+                        <div class="card">
+                            <img src="https://as01.epimg.net/deportes_accion/imagenes/2017/07/26/agua/1501064853_216318_1501079238_sumario_normal.jpg"
+                                class="card-img-top" alt="surf" >
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card">
+                            <img src="https://t1.gstatic.com/licensed-image?q=tbn:ANd9GcRJpevBOQMgZ-Gaeb54y2Tin-o5vsoOtYW2nYtCpzkYqtj6ENWsHD4d1Bv-AUymOggA"
+                                class="card-img-top" alt="lions" >
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card">
+                            <img src="https://www.azcentral.com/gcdn/presto/2023/06/13/USAT/7e113d26-946d-42fb-9f56-2bbf778a74a2-USATSI_20881603.jpg?crop=4799,2700,x0,y0&width=660&height=372&format=pjpg&auto=webp"
+                                class="card-img-top" alt="denver" >
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card">
+                            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/33/fc/b3/patagonia.jpg?w=700&h=500&s=1"
+                                class="card-img-top" alt="nature">
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card">
+                            <img src="https://static.nationalgeographic.es/files/styles/image_3200/public/naturepl_01624717.jpg?w=1600&h=900"
+                                class="card-img-top" alt="whale" >
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card">
+                            <img src="https://autenticos4x4.com/wp-content/uploads/2019/09/medidas-ataque-vehiculo-4x4-1024x366.jpg"
+                                class="card-img-top" alt="4x4">
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card">
+                            <img src="https://images.squarespace-cdn.com/content/v1/561d6b75e4b0ee35463f4138/1534351320568-TS2VJHGKOCSI73SDR8P4/IMG_1880.JPG?format=1500w"
+                                class="card-img-top" alt="margarita">
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card">
+                            <img src="https://www.biografiasyvidas.com/biografia/p/fotos/paez_vuelvan_caras.jpg"
+                                class="card-img-top" alt="paez">
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card">
+                            <img src="https://weraveyou.com/wp-content/uploads/2022/07/Tomorrowland-2022-Mainstage-01-1.jpg"
+                                class="card-img-top" alt="tomorrowland">
+                        </div>
+                    </div>
+                    
+                    
+                    
                 </div>
             </div>
-        </div>   
-        
-        <nav aria-label="Page navigation example" class="margen">
-            <div class="nav nav-tabs justify-content-center" id="nav-tab" role="tablist">
-                <ul class="pagination justify-content-center">
-                    <li class="page-item"><a class="page-link text-secondary" href="index.html">
-                        <i class="fas fa-th"></i></a>
-                    </li>
-                    <li class="page-item"><a class="page-link text-secondary" href="muro.html">■</a></li>
-                </ul>
-            </div>
-        </nav>
-              
-        <div class="tab-content" id="nav-tabContent">
-            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-                <div>
-                    <div class="row g-1">
-                        <div class="col-4">
-                            <div class="col px-0 ml-1">
-                                <img src="https://as01.epimg.net/deportes_accion/imagenes/2017/07/26/agua/1501064853_216318_1501079238_sumario_normal.jpg" class="card">
+        </div>
+        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="card mb-4" style="width:40rem;">
+                        <div class="card-text mt-2">
+                            <div class="fecha float-end">
+                                <p>08/26</p>
                             </div>
-                            <div class="col px-0">
-                                <img src="https://t1.gstatic.com/licensed-image?q=tbn:ANd9GcRJpevBOQMgZ-Gaeb54y2Tin-o5vsoOtYW2nYtCpzkYqtj6ENWsHD4d1Bv-AUymOggA" class="card">
-                            </div>
-                            <div class="col px-0">
-                                <img src="https://static.nationalgeographic.es/files/styles/image_3200/public/naturepl_01624717.jpg?w=1600&h=900" class="card">
+                            <div class="titulo mt-2">
+                                <h4>My Crazy home background!</h4>
                             </div>
                         </div>
+                        <img src="https://as01.epimg.net/deportes_accion/imagenes/2017/07/26/agua/1501064853_216318_1501079238_sumario_normal.jpg"
+                            class="card-img-top" alt="surf">
+                        <div class="card-body">
+                            <h6><strong>204 Likes</strong></h6>
+                            <p class="card-text">This is an example of a very good photo that you can post on instagram.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="card mb-4" style="width: 40rem;">
+                            <div class="card-text mt-2">
+                                <div class="fecha float-end">
+                                    <p>08/26</p>
+                                </div>
+                                <div class="titulo mt-2">
+                                    <h4>Lions</h4>
+                                </div>
+                            </div>
+                            <img src="https://t1.gstatic.com/licensed-image?q=tbn:ANd9GcRJpevBOQMgZ-Gaeb54y2Tin-o5vsoOtYW2nYtCpzkYqtj6ENWsHD4d1Bv-AUymOggA"
+                                class="card-img-top" alt="lions">
+                            <div class="card-body">
+                                <h6><strong>26985 Likes</strong></h6>
+                                <p class="card-text">This is an example of a very good photo that you can post on
+                                    instagram.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="card mb-4" style="width: 40rem;">
+                                <div class="card-text mt-2">
+                                    <div class="fecha float-end">
+                                        <p>08/26</p>
+                                    </div>
+                                    <div class="titulo mt-2">
+                                        <h4>Denver, Champions!</h4>
+                                    </div>
+                                </div>
+                                <img src="https://cdn.nba.com/teams/uploads/sites/1610612743/2023/06/DN-23-PO-Game-recap-web-2-3.png"
+                                    class="card-img-top" alt="denver">
+                                <div class="card-body">
+                                    <h6><strong>3.444.543 Likes</strong></h6>
+                                    <p class="card-text">This is an example of a very good photo that you can post on
+                                        instagram.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row justify-content-center">
+                                <div class="card mb-4" style="width: 40rem;">
+                                    <div class="card-text mt-2">
+                                        <div class="fecha float-end">
+                                            <p>08/26</p>
+                                        </div>
+                                        <div class="titulo mt-2">
+                                            <h4>Mother Earth</h4>
+                                        </div>
+                                    </div>
+                                    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/33/fc/b3/patagonia.jpg?w=700&h=500&s=1"
+                                        class="card-img-top" alt="nature">
+                                    <div class="card-body">
+                                        <h6><strong>204 Likes</strong></h6>
+                                        <p class="card-text">This is an example of a very good photo that you can post
+                                            on instagram.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="row justify-content-center">
+                                    <div class="card mb-4" style="width: 40rem;">
+                                        <div class="card-text mt-2">
+                                            <div class="fecha float-end">
+                                                <p>08/26</p>
+                                            </div>
+                                            <div class="titulo mt-2">
+                                                <h4>The Majesty at Risk</h4>
+                                            </div>
+                                        </div>
+                                        <img src="https://static.nationalgeographic.es/files/styles/image_3200/public/naturepl_01624717.jpg?w=1600&h=900"
+                                            class="card-img-top" alt="whale">
+                                        <div class="card-body">
+                                            <h6><strong>204 Likes</strong></h6>
+                                            <p class="card-text">This is an example of a very good photo that you can
+                                                post on instagram.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="row justify-content-center">
+                                        <div class="card mb-4" style="width: 40rem;">
+                                            <div class="card-text mt-2">
+                                                <div class="fecha float-end">
+                                                    <p>08/26</p>
+                                                </div>
+                                                <div class="titulo mt-2">
+                                                    <h4>Boy's Toy</h4>
+                                                </div>
+                                            </div>
+                                            <img src="https://autenticos4x4.com/wp-content/uploads/2019/09/medidas-ataque-vehiculo-4x4-1024x366.jpg"
+                                                class="card-img-top" alt="4x4">
+                                            <div class="card-body">
+                                                <h6><strong>204 Likes</strong></h6>
+                                                <p class="card-text">This is an example of a very good photo that you
+                                                    can post on instagram.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="row justify-content-center">
+                                            <div class="card mb-4" style="width: 40rem;">
+                                                <div class="card-text mt-2">
+                                                    <div class="fecha float-end">
+                                                        <p>08/26</p>
+                                                    </div>
+                                                    <div class="titulo mt-2">
+                                                        <h4>The Island of Fishermen</h4>
+                                                    </div>
+                                                </div>
+                                                <img src="https://images.squarespace-cdn.com/content/v1/561d6b75e4b0ee35463f4138/1534351320568-TS2VJHGKOCSI73SDR8P4/IMG_1880.JPG?format=1500w"
+                                                    class="card-img-top" alt="margarita">
+                                                <div class="card-body">
+                                                    <h6><strong>204 Likes</strong></h6>
+                                                    <p class="card-text">This is an example of a very good photo that
+                                                        you can post on instagram.
+                                                    </p>
+                                                </div>
 
-                        <div class="col-4">
-                            <div class="col px-0 ml-1">
-                                <img src="https://cdn.nba.com/teams/uploads/sites/1610612743/2023/06/DN-23-PO-Game-recap-web-2-3.png" class="card">
-                            </div>
-                            <div class="col px-0">
-                                <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/33/fc/b3/patagonia.jpg?w=700&h=500&s=1" class="card">
-                            </div>
-                            <div class="col px-0">
-                                <img src="https://autenticos4x4.com/wp-content/uploads/2019/09/medidas-ataque-vehiculo-4x4-1024x366.jpg" class="card">
-                            </div>
-                        </div>   
-
-                            
-                        <div class="col-4">
-                            <div class="col px-0 ml-1">
-                                <img src="https://images.squarespace-cdn.com/content/v1/561d6b75e4b0ee35463f4138/1534351320568-TS2VJHGKOCSI73SDR8P4/IMG_1880.JPG?format=1500w" class="card">
-                            </div>
-                            <div class="col px-0">
-                                <img src="https://www.biografiasyvidas.com/biografia/p/fotos/paez_vuelvan_caras.jpg" class="card">
-                            </div>
-                            <div class="col px-0">
-                                <img src="https://weraveyou.com/wp-content/uploads/2022/07/Tomorrowland-2022-Mainstage-01-1.jpg" class="card">
+                                            </div>
+                                            <div class="row justify-content-center">
+                                                <div class="card mb-4" style="width:40rem;">
+                                                    <div class="card-text mt-2">
+                                                        <div class="fecha float-end">
+                                                            <p>08/26</p>
+                                                        </div>
+                                                        <div class="titulo mt-2">
+                                                            <h4>The Centaur of Payara </h4>
+                                                        </div>
+                                                    </div>
+                                                    <img src="https://www.biografiasyvidas.com/biografia/p/fotos/paez_vuelvan_caras.jpg"
+                                                        class="card-img-top" alt="paez">
+                                                    <div class="card-body">
+                                                        <h6><strong>204 Likes</strong></h6>
+                                                        <p class="card-text">This is an example of a very good photo
+                                                            that you can post on instagram.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="row justify-content-center">
+                                                    <div class="card mb-4" style="width: 40rem;">
+                                                        <div class="card-text mt-2">
+                                                            <div class="fecha float-end">
+                                                                <p>08/26</p>
+                                                            </div>
+                                                            <div class="titulo mt-2">
+                                                                <h4>Mom dont wait for me </h4>
+                                                            </div>
+                                                        </div>
+                                                        <img src="https://weraveyou.com/wp-content/uploads/2022/07/Tomorrowland-2022-Mainstage-01-1.jpg"
+                                                            class="card-img-top" alt="tomorrowland">
+                                                        <div class="card-body">
+                                                            <h6><strong>204 Likes</strong></h6>
+                                                            <p class="card-text">This is an example of a very good photo
+                                                                that you can post on instagram.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <script
+                                            src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+                                            integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+                                            crossorigin="anonymous"></script>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
-            crossorigin="anonymous">
-        </script>
-  </body>
+</body>
+
+
 </html>
